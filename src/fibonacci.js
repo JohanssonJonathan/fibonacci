@@ -76,7 +76,7 @@ class Fibonacci {
     let total = 0;
 
     const amount = modifiedString.length;
-    const contentArray = modifiedString.split('');
+    const stringAsArray = modifiedString.split('');
 
     // Fibonacci sequence starts like this
     // 0 1 1 2 3 ...
@@ -86,7 +86,7 @@ class Fibonacci {
     for (let i = skip; i <= amount + 1; i++) {
 
       // This means we have to go back two indexes to find the correct one.
-      if (Number(contentArray[i - skip])) {
+      if (Number(stringAsArray[i - skip])) {
         total += this.fibonacci(i);
       }
     }
